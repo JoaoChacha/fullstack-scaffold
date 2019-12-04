@@ -1,0 +1,46 @@
+{
+  "name": "typescript-formation",
+  "version": "0.1.0",
+  "description": "A simple Typescript and React startup for fullstack development",
+  "main": "src/index.tsx",
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "webpack --watch --config-name backend",
+    "start:frontend": "webpack-dev-server --hot --open --config-name frontend",
+    "build": "webpack --progress",
+    "lint": "tsc --noEmit && eslint './src/**/*.{ts,tsx}' --quiet --fix"
+  },
+  "author": "João Rodrigues",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.12.14",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "@types/webpack": "^4.41.0",
+    "@types/webpack-dev-server": "^3.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^5.0.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^2.0.1",
+    "nodemon-webpack-plugin": "^4.2.1",
+    "prettier": "^1.19.1",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
